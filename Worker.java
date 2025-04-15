@@ -59,5 +59,19 @@ public class Worker{
         for(int i=0; i<w.length; i++){
             w[i].Display();
         }
+        Highest(w);
+    sc.close();
+    }
+    static void Highest(WorkerInfo w[]){
+        float highest = 0.0f;
+        int number = 0;
+        for(int i = 0; i<w.length; i++){
+            if (w[i].getsal()>highest){
+                highest =w[i].getsal();
+                number = i;
+            }
+        }
+        System.out.println("the person with the largest salary has a salary of "+ highest + " and their information is the following: " );
+        w[number].Display();
     }
 }
